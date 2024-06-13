@@ -3,7 +3,7 @@ from flask import Flask
 from config import config
 
 #Routes
-from routes import Producto
+from routes import Product
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     app.config.from_object(config['development'])
 
     # Blueprint
-    app.register_blueprint(Producto.main, url_prefix='/api/productos')
+    app.register_blueprint(Product.main, url_prefix='/api/productos')
 
     #Error handlers
     app.register_error_handler(404, page_not_found)
