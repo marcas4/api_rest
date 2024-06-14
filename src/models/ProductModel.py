@@ -23,10 +23,9 @@ class ProductModel():
             raise Exception(ex)
         
     @classmethod
-    def get_product(self, id):    
+    def get_product(self,id):    
         try:
             connection=get_connection()
-            products=[]
         
             with connection.cursor() as cursor:
                 cursor.execute("SELECT id, nombre, valor_unitario FROM product WHERE id= %s", (id,))
