@@ -5,6 +5,7 @@ class Product():
         self.nombre = nombre
         self.valor_unitario = valor_unitario
 
+
     def to_JSON(self):
         return {
             'id': self.id,

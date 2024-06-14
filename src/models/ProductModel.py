@@ -40,3 +40,33 @@ class ProductModel():
             return product
         except Exception as ex:
             raise Exception(ex)
+        
+    @classmethod
+    def add_product(self, product):    
+        try:
+            connection=get_connection()
+            with connection.cursor() as cursor:
+                cursor.execute("""INSERT INTO product (nombre, valor_unitario) 
+                                VALUES(%s, %s)""", (product.nombre,product.valor_unitario))
+                affected_rows=cursor.rowcount
+                connection.commit()
+                          
+            connection.close()
+            return affected_rows
+        except Exception as ex:
+            raise Exception(ex)
+        
+    @classmethod
+    def delete_product(self, product):    
+        try:
+            connection=get_connection()
+        
+            with connection.cursor() as cursor:
+                cursor.execute("DELETE FROM product WHERE id = %s", (product.id,))
+                affected_rows=cursor.rowcount
+                connection.commit()    
+                
+            connection.close()
+            return affected_rows
+        except Exception as ex:
+            raise Exception(ex)
