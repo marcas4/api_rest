@@ -70,3 +70,18 @@ class ProductModel():
             return affected_rows
         except Exception as ex:
             raise Exception(ex)
+        
+    @classmethod
+    def update_product(self, product):    
+        try:
+            connection=get_connection()
+            with connection.cursor() as cursor:
+                cursor.execute("""UPDATE product SET nombre = %s, valor_unitario = %s 
+                                WHERE id = %s""", (product.nombre,product.valor_unitario,product.id))
+                affected_rows=cursor.rowcount
+                connection.commit()
+                          
+            connection.close()
+            return affected_rows
+        except Exception as ex:
+            raise Exception(ex)

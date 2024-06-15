@@ -46,6 +46,25 @@ def add_product():
     except Exception as ex:
         return jsonify({'message': str(ex)}),500
 
+
+@main.route('/update/<id>', methods=['PUT'])
+def update_product(id):
+    try:
+        # Se debe validar que los datos lleguen correctamente
+        nombre = request.json['nombre']
+        valor_unitario = int(request.json['valor_unitario'])
+        product=Product(id, nombre, valor_unitario)
+        
+        affected_rows=ProductModel.update_product(product)
+
+        if affected_rows == 1:
+            return jsonify(product.id)
+        else:
+            return jsonify({'message': "No product updated"}), 404
+        
+    except Exception as ex:
+        return jsonify({'message': str(ex)}),500
+
 @main.route('/delete/<id>', methods=['DELETE'])
 def delete_product(id):
     try:
