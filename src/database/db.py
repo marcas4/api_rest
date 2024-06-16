@@ -1,6 +1,8 @@
 import psycopg2 
 from psycopg2 import DatabaseError
 from decouple import config
+from sqlalchemy import create_engine
+
 
 def get_connection():
     try:
@@ -14,3 +16,6 @@ def get_connection():
         )
     except DatabaseError as ex:
         raise ex 
+    
+    # Configura la conexión a la base de datos
+engine = create_engine('postgresql://gescas:oOu5gVJ746zOjOgaKmiAJDtOy2b955b2@dpg-cpjnge821fec73a109u0-a.oregon-postgres.render.com:5432/products_kt0r')

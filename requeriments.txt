@@ -1,0 +1,8 @@
+python-dotenv
+sqlalchemy
+flask
+flask-cors
+psycopg2
+python-dotenv
+python-decouple
+
