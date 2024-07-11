@@ -18,4 +18,4 @@ def get_connection():
         raise ex 
     
     # Configura la conexión a la base de datos
-engine = create_engine('postgresql://gescas:oOu5gVJ746zOjOgaKmiAJDtOy2b955b2@dpg-cpjnge821fec73a109u0-a.oregon-postgres.render.com:5432/products_kt0r')
+engine = create_engine('postgresql://produc_user:kaFVAfj2cDrXJHfkycDSw2gCF92O5iLX@dpg-cq81ei0gph6c73bko53g-a.oregon-postgres.render.com/produc')
