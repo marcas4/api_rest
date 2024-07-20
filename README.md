@@ -30,7 +30,7 @@ En este contexto, se ha creado esta API REST que hace parte del programa Pedidos
 Este software puede ser probado desde un cliente como postman desde donde se puede consumir su servicio GET, POST, PUT y DELETE  
 Se debe conectar a una base de datos Postgres con la siguiente entidad:
 
-```http
+```bash
   CREATE TABLE IF NOT EXISTS product (
             id SERIAL PRIMARY KEY,
             nombre VARCHAR(255),
@@ -40,7 +40,7 @@ Se debe conectar a una base de datos Postgres con la siguiente entidad:
 
 Como ejemplo de producto se puede utilizar el siguiente insert:
 
-```http
+```bash
  INSERT INTO product (nombre, valor_unitario)
       VALUES ('Arepa con queso', 3500)
 ```
@@ -53,13 +53,13 @@ Como ejemplo de producto se puede utilizar el siguiente insert:
 
 #### Get all items
 
-```http
+```bash
   GET /api/productos
 ```
 
 #### Get item
 
-```http
+```bash
   GET /api/productos/${id}
 ```
 
@@ -69,7 +69,7 @@ Como ejemplo de producto se puede utilizar el siguiente insert:
 
 #### Post item
 
-```http
+```bash
   POST /api/productos/add
 ```
 | Parameter | Type     | Description                         |
@@ -79,7 +79,7 @@ Como ejemplo de producto se puede utilizar el siguiente insert:
 
 #### Put item
 
-```http
+```bash
   PUT /api/productos/update/${id}
 ```
 | Parameter | Type     | Description                         |
@@ -89,7 +89,7 @@ Como ejemplo de producto se puede utilizar el siguiente insert:
 
 #### Delete item
 
-```http
+```bash
   DELETE /api/productos/${id}
 ```
 
