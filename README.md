@@ -9,6 +9,7 @@ Api REST que se conecta a una base de datos PostgreSQL con las funcionalidades p
 #### Marco Teórico
 #### Funcionamiento
 #### API Reference
+#### Modelo de datos
 #### Tecnologías
 #### Elaborado por
 
@@ -95,6 +96,9 @@ Como ejemplo de producto se puede utilizar el siguiente insert:
 | Parameter | Type     | Description                         |
 | :-------- | :------- | :--------------------------------   |
 | `id`     | `string` | **Required**. Id del artículo a borrar  |
+
+### Modelo de datos
+![Modelo de datos](modeloDeDatos.png?raw=true)
 
 ### Tecnologías
 
