@@ -3,6 +3,16 @@
 
 Api REST que se conecta a una base de datos PostgreSQL con las funcionalidades para realizar un CRUD
 
+
+## Tabla de contenido
+
+#### Marco Teórico
+#### Funcionamiento
+#### API Reference
+#### Tecnologías
+#### Elaborado por
+
+
 ### Marco Teórico
 Gracias al avance de la tecnología, las personas pueden ayudarse con herramientas tecnológicas para realizar su trabajo de manera mas eficiente, aún mas si se trata de personas con discapacidad.
 La tecnología ha demostrado ser una aliada fundamental para mejorar la calidad de vida de las personas con discapacidad, ayudando a la inclusión social, al permitirles participar activamente en el ámbito laboral, dando empoderamiento y brindando herramientas que les permiten desarrollar sus habilidades.
@@ -10,6 +20,8 @@ Su constante evolución y desarrollo continuo abren las puertas a un futuro cada
 Las aplicaciones web pueden ser una gran ayuda para personas con discapacidad que les faciliten sus tareas tanto diarias como laborales.
 La tecnología ha abierto un mundo de oportunidades brindándoles herramientas que les permiten participar activamente en la sociedad, les otorga autonomía, acceso a la información, acceso a la comunicación así como oportunidades laborales.
 En este contexto, se ha creado esta API REST que hace parte del programa Pedidos en Restaurante, que permitirá que personas con discapacidad cognitiva puedan trabajar en un restaurante tomando el pedido de los clientes, eligiendo de una lista predeterminada con precios y posteriormente llevando la orden a su mesa.
+
+
 
 
 ## Funcionamiento
@@ -98,4 +110,5 @@ Nombre: Marcia Castro Moya
 Email: marcas4@gmail.com
 
 X: @marcas4
+
 
